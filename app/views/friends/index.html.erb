@@ -1,0 +1,14 @@
+Friends:<br/>
+<ul>
+<% @friends.each do |f| %>
+  <li>
+    <%= f.name %>,
+    <%= f.avatar.original_filename %><br/>
+    <%= image_tag f.avatar.url(:thumb) %><%= f.avatar.url(:thumb) %><br/>
+    <%= image_tag f.avatar.url(:square) %><%= f.avatar.url(:square) %><br/>
+    <%= image_tag f.avatar.url(:medium) %><%= f.avatar.url(:medium) %><br/>
+  </li>
+<% end %>
+</ul>
+<br/>
+<%= link_to('Add Friend', new_friend_path()) %>
